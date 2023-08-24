@@ -1,5 +1,6 @@
 let map;
 let userMarker;
+var poiMarker;
 
 const defaultLatitude = 37.7749;
 const defaultLongitude = -122.4194;
