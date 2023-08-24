@@ -31,8 +31,8 @@ function showPosition(position) {
   if (userMarker) {
     map.removeLayer(userMarker);
   }
-  map.setView([latitude, longitude]);
-  userMarker = L.marker([latitude, longitude], 12).addTo(map);
+  map.setView([latitude, longitude], 12);
+  userMarker = L.marker([latitude, longitude]).addTo(map);
 }
 
 // error handler

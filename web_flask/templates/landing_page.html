@@ -7,10 +7,30 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script src="../static/scripts/landing_page.js"></script>
+        <script src="../static/scripts/search_location.js"></script>
     </head>
     <body>
         <div id="container">
-            <div id="map"></div>
+            <header id="header">
+
+            </header>
+            <section id="navbar">
+                
+            </section>
+            <section id="mainSection">
+                <div id="sideNav">
+                </div>
+                <section id="subSection">
+                    <div id="mapInfo">
+                        <div id="search_location">
+                            <input name="locationInput" id="locationInput" class="inputbox" placeholder="Enter Location" />
+                            <button type="submit" id="locationSearch" class="button">Find</button>
+                        </div>
+                    </div>
+                    <div id="map"></div>
+                </section>
+                
+            </section>
         </div>
     </body>
 </html>

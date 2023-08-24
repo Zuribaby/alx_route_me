@@ -1,4 +1,90 @@
-#map {
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Helvetica', Arial, sans-seriff;
+}
+#container {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 50px;
+    background: #91ccee;
+}
+
+#navbar {
+    display: flex;
+    background: #000000;
+    width: 100%;
+    height: 50px;
+}
+
+#mainSection {
+    display: flex;
+}
+
+#mainSection #sideNav {
+    width: 20%;
+    height: 100vh;
+    background: #e6e4e4;
+}
+
+#mainSection #subSection {
+    width:  80%;
+    height: 100vh;
+}
+#mainSection #subSection #map {
     width:  100%;
-    height: 600px;
+    height: 100vh;
+}
+
+#mainSection #subSection #mapInfo {
+    display: flex;
+    width:  100%;
+    height: 50px;
+    background: #ffffff;
+}
+
+#mainSection #subSection #mapInfo #search_location {
+    display: flex;
+    margin-left: auto;
+}
+
+#mainSection #subSection #mapInfo #search_location .inputbox {
+    width: 300px;
+    height: 28px;
+    margin: 8px 0px 0px 0px;
+    padding-left: 10px;
+    border: 1px solid #5050f1;
+    color: #181717;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+#mainSection #subSection #mapInfo #search_location .inputbox:focus {
+    outline: none;
+}
+
+#mainSection #subSection #mapInfo #search_location .button {
+    width: 50px;
+    height: 30px;
+    margin: 7px 10px 0px 0px;
+    border: none;
+    margin-left: 0px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background: #5050f1;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#search_location .button:hover {
+    background: #0000ff;
 }
