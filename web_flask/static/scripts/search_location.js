@@ -22,20 +22,27 @@ document.addEventListener("DOMContentLoaded", function () {
         if (data.length > 0) {
             const latitude = parseFloat(data[0].lat);
             const longitude = parseFloat(data[0].lon);
+            const lati = document.getElementById("lat");
+            const long = document.getElementById("lon");
+            lati.textContent = latitude;
+            long.textContent = longitude;
             showLocation(latitude, longitude);
+            reverseGeocode(latitude, longitude);
         } else {
             console.log("location unknown");
         }
       })
       .catch(error => {
         console.error("An error occurred:", error);
-      });
+    });
   }
   
   function showLocation(lat=0, long=0) {
     if (userMarker) {
-      map.removeLayer(userMarker);
+        map.removeLayer(userMarker);
     }
     map.setView([lat, long], 12);
     userMarker = L.marker([lat, long]).addTo(map);
-  }
+  }  
+
+  

@@ -15,11 +15,12 @@ header {
     width: 100%;
     height: 50px;
     background: #91ccee;
+    position: static;
 }
 
 header #logo {
     font-size: larger;
-    color: #ffffff;
+    color: #0000ff;
     font-weight: bold;
     padding: 10px 15px 0px 10px;
     border-right: 2px solid #ffffff;
@@ -36,37 +37,77 @@ header #user {
 
 #navbar {
     display: flex;
-    background: #000000;
+    background: #0f0f0f;
+    padding: 5px 10px 0px 10px;
     color: #ffffff;
     width: 100%;
     height: 50px;
 }
 
-#navbar #navigationElement {
-    display: flex;
-}
-
 ul {
     padding: 5px 0px 0px 0px;
     list-style: none;
-    text-transform: uppercase;
 }
 
-li {
-    width: 180px;
+#navbar .navigationElement ul {
+    width: 100%;
+    height: 200px;
+    background: #ffffff;
+    color: #000000;
+    margin: 10px 0 0 0;
+}
+
+#navbar .navigationElement .poi {
+    height: 100%;
+    width: 25%;
+}
+
+
+#navbar h3 {
+    padding: 5px 10px 0px 10px;
+    margin: 5px 10px 0px 10px;
+}
+
+.listItems {
+    width: 230px;
     height: 40px;
-    margin: 0px 10px 0px 10px;
-    padding: 10px 5px 0px 10px;
-    background: #181717;
-    color: #646262;
-    border-radius: 15px;
     cursor: pointer;
 }
 
-li:hover {
-    background: #0c0c0c;
-    color:#ffffff;
-    border: 1px solid #ffffff;
+.dropdown {
+    position: relative;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background: #dad7d7;;
+    color: #000000;
+    min-width: 100px;
+    margin: 0 0 0 20px;
+}
+
+.dropdownContent .dropdown-items {
+    text-transform: capitalize;
+}
+
+.dropdownContent .dropdown-items:hover {
+    background: #ffffff;
+}
+
+#poi:hover .dropdownContent{
+    display: block; 
+    position: relative; 
+}
+
+#poi h3,
+#myLocation h3{
+    text-transform: uppercase;
+}
+
+#poi h3:hover,
+#myLocation h3:hover {
+    color: #3f3a3a;
 }
 
 #mainSection {
@@ -75,7 +116,6 @@ li:hover {
 
 #mainSection #sideNav {
     width: 20%;
-    height: 570px;
     background: #e6e4e4;
 }
 
@@ -137,7 +177,22 @@ li:hover {
 
 footer {
     width: 100%;
-    height: 120px;
-    background: #000000;
-    opacity: calc(1);
+    height: 98px;
+    background: #0f0f0f;
+}
+.custom-icon {
+    background-color: transparent !important;
+}
+.card {
+    font-size: 11px;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card-title{
+    font-size: large;
+    padding-bottom: 10px;
+    color: #0000ff;
 }

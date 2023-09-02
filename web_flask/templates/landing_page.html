@@ -8,6 +8,8 @@
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script src="../static/scripts/landing_page.js"></script>
         <script src="../static/scripts/search_location.js"></script>
+        <script src="../static/scripts/poi.js"></script>
+        <script src="../static/scripts/script.js"></script>
     </head>
     <body>
         <div id="container">
@@ -16,13 +18,30 @@
                 <div id="user"></div>
             </header>
             <section id="navbar">
-                <ul id="navigationElement">
-                    <li id="myLocation">my location</li>
-                    <li id="poi">point of interest</li>
-                </ul>
+                <div id="myLocation" class="listItems">
+                    <h3 id="userlocation">my location</h3>
+                </div>
+                <div id="poi" class="listItems">
+                    <h3>point of interest</h3>
+                    <div class="dropdown">
+                        <ul class="dropdownContent">
+                            <li id="hotels" class="dropdown-items">hotels</li>
+                            <li id="hospitals" class="dropdown-items">hospitals</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
             <section id="mainSection">
                 <div id="sideNav">
+                    <div class="card">
+                        <div class="card-title">Location info</div>
+                        <ul>
+                            <li id="lon"></li>
+                            <li id="lat"></li>
+                        </ul>
+                        <br />
+                        <p id="address"></p>
+                    </div>
                 </div>
                 <section id="subSection">
                     <div id="mapInfo">

@@ -1,21 +1,20 @@
 let map;
 let userMarker;
-var poiMarker;
+const defaultLatitude = 0;
+const defaultLongitude = 0;
 
-const defaultLatitude = 37.7749;
-const defaultLongitude = -122.4194;
 // map inittializer
 function initMap() {
-  map = L.map('map').setView([defaultLatitude, defaultLongitude], 12);
-  userMarker = L.marker([defaultLatitude, defaultLongitude]).addTo(map);
+  map = L.map('map').setView([defaultLatitude, defaultLongitude], 18);
+  //userMarker = L.marker([defaultLatitude, defaultLongitude]).addTo(map);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
+  getLocation();
 }
 
 // get user current location
 function getLocation() {
-  initMap();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
   } else {
@@ -32,8 +31,13 @@ function showPosition(position) {
   if (userMarker) {
     map.removeLayer(userMarker);
   }
-  map.setView([latitude, longitude], 12);
+  map.setView([latitude, longitude], 15);
   userMarker = L.marker([latitude, longitude]).addTo(map);
+  const lati = document.getElementById("lat");
+  const long = document.getElementById("lon");
+  lati.textContent = "Latitude: " + latitude;
+  long.textContent = "Longitude: " + longitude;
+  reverseGeocode(latitude, longitude);
 }
 
 // error handler
@@ -53,4 +57,4 @@ function showError(error) {
       break;
   }
 }
-window.onload = getLocation;
+window.onload = initMap;
