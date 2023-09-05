@@ -16,7 +16,12 @@ function reverseGeocode (lat, lon) {
       document.getElementById('address').textContent = `Address: ${address}`;
     })
     .catch(error => {
-      console.error('Error fetching reverse geocoding data:', error);
+              console.error('Error fetching reverse geocoding data:', error);
       document.getElementById('address').textContent = 'Error fetching address data.';
     });
+}
+
+function closeInfo () {
+    const Message = document.getElementById("info-message");
+    Message.style.display = "none";
 }
