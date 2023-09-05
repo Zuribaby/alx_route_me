@@ -2,13 +2,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("locationInput");
     const searchButton = document.getElementById("locationSearch");
     const resultsDiv = document.getElementById("map");
+    const closeMessage = document.getElementById("closeMessage");
     
+
+    closeMessage.addEventListener("click", function () {
+        closeInfo();
+    });
     locationSearch.addEventListener("click", function () {
       const locationQuery = locationInput.value;
       searchLocation(locationQuery);
     });
   });
-  
+
   function searchLocation(query) {
     const baseUrl = "https://nominatim.openstreetmap.org/search";
     const params = new URLSearchParams({
@@ -29,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
             showLocation(latitude, longitude);
             reverseGeocode(latitude, longitude);
         } else {
-            console.log("location unknown");
+            const msg = document.getElementById("msg");
+            msg.textContent = "unknown location";
         }
       })
       .catch(error => {
