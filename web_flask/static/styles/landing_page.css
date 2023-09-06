@@ -121,11 +121,11 @@ ul {
 
 #mainSection #subSection {
     width:  80%;
-    height: 100%;
+    height: 500px;
 }
 #mainSection #subSection #map {
     width:  100%;
-    height: 400px;
+    height: 100%;
 }
 
 #mainSection #subSection #mapInfo {
