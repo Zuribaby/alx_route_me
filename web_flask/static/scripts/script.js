@@ -24,4 +24,5 @@ function reverseGeocode (lat, lon) {
 function closeInfo () {
     const Message = document.getElementById("info-message");
     Message.style.display = "none";
+    
 }

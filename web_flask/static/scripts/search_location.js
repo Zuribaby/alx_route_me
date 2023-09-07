@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchButton = document.getElementById("locationSearch");
     const resultsDiv = document.getElementById("map");
     const closeMessage = document.getElementById("closeMessage");
-    
 
     closeMessage.addEventListener("click", function () {
         closeInfo();
@@ -34,8 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
             showLocation(latitude, longitude);
             reverseGeocode(latitude, longitude);
         } else {
+            const searchMsg = document.getElementById("info-message");
             const msg = document.getElementById("msg");
             msg.textContent = "unknown location";
+            if (searchMsg.style.display !== "block") {
+              searchMsg.style.display = "block";
+            }
         }
       })
       .catch(error => {
