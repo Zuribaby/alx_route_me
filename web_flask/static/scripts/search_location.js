@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const longitude = parseFloat(data[0].lon);
             const lati = document.getElementById("lat");
             const long = document.getElementById("lon");
-            lati.textContent = latitude;
-            long.textContent = longitude;
+            lati.textContent = "latitude: " + latitude;
+            long.textContent = "longitude: " + longitude;
             showLocation(latitude, longitude);
             reverseGeocode(latitude, longitude);
         } else {
@@ -53,5 +53,3 @@ document.addEventListener("DOMContentLoaded", function () {
     map.setView([lat, long], 12);
     userMarker = L.marker([lat, long], { icon: customIcon }).addTo(map);
   }  
-
-  

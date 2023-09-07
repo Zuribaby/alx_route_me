@@ -23,7 +23,7 @@ var customIcon = L.icon({
 // get user current location
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, showError);
+    var watchId = navigator.geolocation.getCurrentPosition(showPosition, showError);
   } else {
     alert("Geolocation is not supported by this browser.");
   }
@@ -64,4 +64,5 @@ function showError(error) {
       break;
   }
 }
+
 window.onload = initMap;
