@@ -13,6 +13,13 @@ function initMap() {
   getLocation();
 }
 
+var customIcon = L.icon({
+  iconUrl: '../static/images/redLocation-icon.png', // Replace with your custom icon URL
+  iconSize: [32, 32], // Size of the icon
+  iconAnchor: [16, 32], // Point of the icon that corresponds to the marker's location
+  popupAnchor: [0, -32] // Point from which the popup should open relative to the iconAnchor
+});
+
 // get user current location
 function getLocation() {
   if (navigator.geolocation) {
@@ -32,7 +39,7 @@ function showPosition(position) {
     map.removeLayer(userMarker);
   }
   map.setView([latitude, longitude], 15);
-  userMarker = L.marker([latitude, longitude]).addTo(map);
+  userMarker = L.marker([latitude, longitude], { icon: customIcon }).addTo(map);
   const lati = document.getElementById("lat");
   const long = document.getElementById("lon");
   lati.textContent = "Latitude: " + latitude;

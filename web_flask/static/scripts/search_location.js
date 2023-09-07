@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         map.removeLayer(userMarker);
     }
     map.setView([lat, long], 12);
-    userMarker = L.marker([lat, long]).addTo(map);
+    userMarker = L.marker([lat, long], { icon: customIcon }).addTo(map);
   }  
 
   
