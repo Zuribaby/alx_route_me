@@ -173,7 +173,7 @@ function fetchHotels() {
 
 //poi for hospitals
 function fetchHospitals() {
-  // Get latitude and longitude from input fields
+  // Get latitude and lonlsgitude from input fields
   const hlon = parseFloat(document.getElementById("lon").value);
   const hlat = parseFloat(document.getElementById("lat").value);
 
