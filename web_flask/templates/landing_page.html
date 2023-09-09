@@ -4,6 +4,7 @@
         <title>RouteMe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../static/styles/landing_page.css" />
+        <link rel="stylesheet" href="../static/styles/responsive.css" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <script src="../static/scripts/landing_page.js"></script>
@@ -17,20 +18,6 @@
                 <div id="logo">RouteMe</div>
                 <div id="user"></div>
             </header>
-            <section id="navbar">
-                <div id="myLocation" class="listItems">
-                    <h3 id="userlocation">my location</h3>
-                </div>
-                <div id="poi" class="listItems">
-                    <h3>point of interest</h3>
-                    <div class="dropdown">
-                        <ul class="dropdownContent">
-                            <li id="hotels" class="dropdown-items">hotels</li>
-                            <li id="hospitals" class="dropdown-items">hospitals</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
             <section id="mainSection">
                 <div id="sideNav">
                     <div class="card">
@@ -44,7 +31,26 @@
                     </div>
                 </div>
                 <section id="subSection">
-                    <div id="mapInfo">
+                    <div id="navbar">
+                        <div class="dropdown-button">
+                            <ul class="menu-items">
+                                <li class="my-location">my location</li>
+                                <li class="hotels">hotels</li>
+                                <li class="hospitals">hospitals</li>
+                            </ul>
+                        </div>
+                        <div id="menu">
+                            <div  id="location-button" class="my-location">
+                                <h3>my location</h3>
+                            </div>
+                            <div id="poi" class="dropdown-container">
+                                <h3>point of interest</h3>
+                                <ul class="dropdown-list">
+                                    <li class="dropdown-items hotels">hotels</li>
+                                    <li class="dropdown-items hospitals">hospitals</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div id="search_location">
                             <input name="locationInput" id="locationInput" class="inputbox" placeholder="Enter Location" />
                             <button type="submit" id="locationSearch" class="button">Find</button>

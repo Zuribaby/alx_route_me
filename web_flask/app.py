@@ -3,6 +3,10 @@
 from flask import Flask, render_template, make_response, abort
 app = Flask(__name__)
 
+# Configure for HTTPS
+app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+
 @app.route('/home', strict_slashes=False)
 def home_index():
     """ render home page """

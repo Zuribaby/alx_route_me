@@ -1,121 +1,145 @@
-MVP specification
+# RouteME
 
-Architecture
+A geolocation web app.
 
-The RouteMe MVP follows a simplified architecture to deliver the core functionality of helping commuters find routes between locations. The architecture consists of three main components: Frontend, Backend, and Geospatial Integration.
+![Desktop View](./readme_images/routeme_desktop.PNG)
+![Ipad view](./readme_images/routeme_ipad.PNG) ![Mobile view](./readme_images/routme_mobile.PNG)
 
-Frontend:
-The frontend component is responsible for user interaction and presentation. It comprises HTML, CSS, Bootstrap, and JavaScript for building the user interface. Users access the application through a web browser on various devices such as phones, tablets, and laptops. The frontend provides an input form where users can enter their starting location and desired destination.
+## Table of Contents
 
-Backend:
-The backend handles the processing of user inputs, route calculation, and interaction with the geospatial integration component. Built using Flask, a lightweight Python web framework, the backend receives the user's location inputs from the frontend. It then uses a simplified route calculation logic to determine the best route between the two points. The backend also communicates with the geospatial integration component to convert user-entered addresses into geographic coordinates.
+- [Project Name](#project-name)
+- [Table of Contents](#table-of-contents)
+- [About](#about)
+- [Demo](#demo)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technology Used](technology-used)
+- [Authors](#authors)
+- [Acknowledgement](acknowledgement)
 
-Geospatial Integration:
-The geospatial integration component is responsible for translating user-entered location data into geographic coordinates and vice versa. It uses the Geopy library to perform geocoding (address to coordinates) and reverse geocoding (coordinates to address). This component is essential for accurately processing user inputs and generating routes on the map.
+## About
 
-Data Flow:
+Route me is a geolocation app that, which is a portfolio project done by three Alx software engineering
+student which server as the final project for the foundation phase of their softeware engineering journey
+in  ALX.
+RouteMe is a Projected initiated to help commutters navigate their environment  and get info oupdate of any location
+of their choice. the user friendly interface enable seamless navigation.
 
-The user interacts with the frontend by entering their current location and desired destination.
-The frontend sends the user's input to the backend through HTTP requests.
-The backend receives the input, calculates a route, and communicates with the geospatial integration component to ensure accurate geocoding.
-The backend returns the calculated route along with step-by-step directions to the frontend.
-The frontend displays the route on an interactive map using the Leaflet.js library.
-User feedback, such as success or failure notifications, is provided by the frontend based on the data received from the backend.
+## Demo
 
-Iteration Plan:
+- open any browser of your choice preferably on phone to get accurrate location.
+- enable location on you phone or pc. and make sure you grant location access when asked by your device
+- click the link https://provolearning.tech/route-me or enter it in your opened browser 
 
-Iteration 1: Basic MVP Development
-Implement a basic frontend interface for entering locations and displaying routes.
-Integrate the Geopy library for geocoding and reverse geocoding.
-Develop a simplified route calculation logic.
-Iteration 2: Map Integration and User Feedback
+## Features
 
-Integrate Leaflet.js to render an interactive map.
-Enhance the user feedback system with notifications for route calculation results.
-Test and refine the geocoding accuracy.
-Iteration 3: Documentation and Refinement
+- `My location`: shows user current location on the map
+- `point of interest`: show marker of place of intrest on your current location
+- `search box`: seach for any specific location on the map
 
-Create comprehensive documentation detailing the application's usage, features, and limitations.
-Refine the user interface for improved usability.
-Address any identified bugs or issues.
+## Installation
 
+1. clone the repository
 
+```bash
+root> _
+root> git clone https://github.com/Zuribaby/alx-route-me.git
+...
 
-APIs and Methods:
-In the "RouteMe" project, we will create several API routes to facilitate communication between the web client and the web server. These API routes will handle various functionalities of the application, allowing users to interact with the route finder and retrieve necessary information.
-API Routes for Web Client to Web Server Communication:
-/api/calculate_route
-Method: POST
-Description: This route will receive user inputs, including the starting location and destination. It will calculate the best route based on the provided locations.
-Request Parameters:
-start_location: The starting location entered by the user.
-destination: The destination entered by the user.
-Response: JSON object containing the calculated route information and step-by-step directions.
-/api/geocode
-Method: GET
-Description: This route will perform geocoding for user-entered addresses to convert them into geographic coordinates.
-Query Parameters:
-address: The address to be geocoded.
-Response: JSON object containing the latitude and longitude of the provided address.
-/api/reverse_geocode
-Method: GET
-Description: This route will perform reverse geocoding for geographic coordinates to retrieve corresponding address information.
-Query Parameters:
-latitude: The latitude coordinate.
-longitude: The longitude coordinate.
-Response: JSON object containing the address details of the provided coordinates.
-API Endpoints for External Clients:
-calculate_route(start_location, destination)
-Description: A function/method that external clients can use to programmatically calculate routes between two locations.
-Parameters:
-start_location: The starting location.
-destination: The destination.
-Returns: A route object with calculated directions.
-get_geocode(address)
-Description: A function/method to perform geocoding for a given address.
-Parameters:
-address: The address to be geocoded.
-Returns: A tuple containing latitude and longitude coordinates.
-get_reverse_geocode(latitude, longitude)
-Description: A function/method to perform reverse geocoding for given latitude and longitude coordinates.
-Parameters:
-latitude: The latitude coordinate.
-longitude: The longitude coordinate.
-Returns: An address object with details.
-3rd Party APIs:
-OpenStreetMap Nominatim API:
-Description: An open-source geospatial service provider for geocoding and reverse geocoding. Used to convert user-entered addresses to coordinates and vice versa.
-Google Maps API:
-Description: A geospatial service provider for additional geocoding support and map rendering. It will be used as a redundant source for geospatial information.
-OpenTripPlanner API:
-Description: An API to access public transit schedules and plan transit routes. It will provide real-time data on public transportation options for the calculated routes.
+```
+2. change directory to the cloned repository
 
+```bash
+cd alx-route-me
+```
+3. install dependencies
 
+```bash
+#get update for you linux machine
+root/alx-route-me> sudo apt-get update
+...
+#install python3
+root/alx-route-me> sudo app-get install python3
+...
 
+#install pip
+root/alx-route-me> sudo app-get install python3-pip
+...
 
+#install flask
+root/alx-route-me> pip3 install python3-flask
 
+#install Node.js and npm
+root/alx-route-me> pip3 install node.js npm
+...
 
+#install gunicorn 
+root/alx-route-me> pip3 install gunicorn
+...
 
+```
+4. generate self signed ssl certificate
 
+```bash
+#ckeck if Openssl is installed or isntall if not
+root/alx-route-me> openssl --version
+...
 
-User Story
-User Story 1: Route Calculation and Display
-As a commuter who is unfamiliar with the area,I want to enter my current location and desired destination, So that I can quickly find the best route and navigate with ease.
-User Story 2: Step-by-Step Directions
-As a user trying to reach a specific destination, I want to see detailed step-by-step directions for the recommended route, So that I can follow the instructions easily and reach my destination without confusion.
-User Story 3: Geocoding Accuracy
-As a user relying on accurate route information, I want the application to accurately convert my entered address into geographic coordinates, So that I can trust that the suggested route is based on correct location data.
-User Story 4: Route Preferences
-As a commuter with specific preferences, I want the option to select preferences such as avoiding toll roads or choosing the fastest route, So that I can customize the suggested route according to my needs.
-User Story 5: Emergency Assistance
-As a user who values safety while commuting, I want the ability to send my location to an emergency contact in case I am lost or need help, So that I can ensure my well-being while using the route finder application.
+root/alx-route-me> sudo apt-get install openssl
+...
 
+#Generate a Private Key
+root/alx-route-me> openssl genpkey -algorithm RSA -out private.key
+...
 
+#Generate a Certificate Signing Request
+root/alx-route-me> openssl req -new -key private.key -out certificate.csr
+...
 
+#Generate self signed certificate
+root/alx-route-me> openssl x509 -req -in certificate.csr -signkey private.key -out certificate.crt
+...
 
+```
+`Note:` follow install processes and provide necessary information amd permissions.
 
+## Usage 
 
+```bash
+root/alx-route-me>gunicorn -b 0.0.0.0:443 --certfile=/path/to/certificate.crt --keyfile=/path/to/private.key app:app
+... 
+#your https server will start 
+#use the url provided by the server
+```
 
+## Technology Used
 
+- Flask
+- HTML/CSS
+- JavaScript
 
+## Authors
 
+[Chiamaka Nwobodo](https://github.com/Zuribaby)
+  [![Github](./readme_images/github.png)](https://github.com/Zuribaby)
+  [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
+
+[Aanuoluwapo Shodipo](https://github.com/yourusernme)
+  [![Github](./readme_images/github.png)](https://github.com/yourusername)
+  [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
+
+[Provo Iyenoma](https://github.com/Provoski)
+  [![Github](./readme_images/github.png)](https://github.com/Provoski)
+  [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/iyenoma-provo-6b633516a)
+
+## Acknowledgement
+We would like to extend our thanks to the following individuals and resources for their contributions and support in the development of this project:
+
+- **ALX-SE** - a big thank you to ALX-SE community for providing the platform and tools needed to achieve this milestone 
+- **OpenStreetMap ** - We are grateful for to OpenStreetMap open source community for providing API, frameworks, and tools that made this project possible.
+- **Stack Overflow** - The Stack Overflow community has been instrumental in helping us overcome technical challenges.
+- **GitHub** - Making collaboration and version control seamless.
+- **Chatgpt** - Helped reduced time that would otherwise be wasted for code debugging. 
+
+Feel free to add or modify this section to acknowledge anyone or anything that has had a positive impact on your project.
