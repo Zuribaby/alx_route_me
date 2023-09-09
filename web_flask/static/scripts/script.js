@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const userLocation = document.getElementById("userlocation");
-    userLocation.addEventListener("click", function () {
-      getLocation();
+    const dropdownButton = document.querySelector('.dropdown-button');
+    const menuItems = document.querySelector('.menu-items');
+
+    
+    dropdownButton.addEventListener('click', function () {
+      menuItems.classList.toggle('show-menu');
     });
 });
 
@@ -52,3 +55,4 @@ function getBoundindbox() {
       console.error('Error fetching boundingbox of geocoding data:', error);
     });
 }
+
