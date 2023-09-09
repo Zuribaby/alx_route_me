@@ -14,9 +14,9 @@ A geolocation web app.
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technology Used](technology-used)
+- [Technology Used](#technology-used)
 - [Authors](#authors)
-- [Acknowledgement](acknowledgement)
+- [Acknowledgement](#acknowledgement)
 
 ## About
 
@@ -101,7 +101,7 @@ root/alx-route-me> openssl x509 -req -in certificate.csr -signkey private.key -o
 ...
 
 ```
-`Note:` follow install processes and provide necessary information amd permissions.
+`Note:` follow installation processes and provide necessary information amd permissions.
 
 ## Usage 
 
@@ -125,7 +125,7 @@ root/alx-route-me>gunicorn -b 0.0.0.0:443 --certfile=/path/to/certificate.crt --
   [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
 
 [Aanuoluwapo Shodipo](https://github.com/Desolution1)
-  [![Github](./readme_images/github.png)](https://github.com/yourusername)
+  [![Github](./readme_images/github.png)](https://github.com/Desolution1)
   [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
 
 [Provo Iyenoma](https://github.com/Provoski)
@@ -133,12 +133,10 @@ root/alx-route-me>gunicorn -b 0.0.0.0:443 --certfile=/path/to/certificate.crt --
   [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/iyenoma-provo-6b633516a)
 
 ## Acknowledgement
-We would like to extend our thanks to the following individuals and resources for their contributions and support in the development of this project:
+We would like to extend our thanks to the following resources for their contributions and support in the development of this project:
 
 - **ALX-SE** - a big thank you to ALX-SE community for providing the platform and tools needed to achieve this milestone 
-- **OpenStreetMap ** - We are grateful for to OpenStreetMap open source community for providing API, frameworks, and tools that made this project possible.
+- **OpenStreetMap** - We are grateful for to OpenStreetMap open source community for providing API, frameworks, and tools that made this project possible.
 - **Stack Overflow** - The Stack Overflow community has been instrumental in helping us overcome technical challenges.
 - **GitHub** - Making collaboration and version control seamless.
 - **Chatgpt** - Helped reduced time that would otherwise be wasted for code debugging. 
-
-Feel free to add or modify this section to acknowledge anyone or anything that has had a positive impact on your project.
