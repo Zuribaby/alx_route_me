@@ -114,7 +114,8 @@ root/alx-route-me>gunicorn -b 0.0.0.0:443 --certfile=/path/to/certificate.crt --
 
 ## Technology Used
 
-- Flask
+- Python 3.9.0
+- Flask 2.3.2
 - HTML/CSS
 - JavaScript
 
