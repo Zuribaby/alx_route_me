@@ -20,11 +20,10 @@ A geolocation web app.
 
 ## About
 
-Route me is a geolocation app that, which is a portfolio project done by three Alx software engineering
-student which server as the final project for the foundation phase of their softeware engineering journey
+Route me is a geolocation web app. it is a group portfolio project done by Alx software engineering
+student which serve as a final project for the foundation phase of our softeware engineering journey
 in  ALX.
-RouteMe is a Projected initiated to help commutters navigate their environment  and get info oupdate of any location
-of their choice. the user friendly interface enable seamless navigation.
+RouteMe is a Projecte initiated to help commutters navigate their environment and get info location update. the user friendly interface enable seamless navigation.
 
 ## Demo
 
@@ -51,7 +50,7 @@ root> git clone https://github.com/Zuribaby/alx-route-me.git
 2. change directory to the cloned repository
 
 ```bash
-cd alx-route-me
+root> cd alx-route-me
 ```
 3. install dependencies
 
@@ -125,7 +124,7 @@ root/alx-route-me>gunicorn -b 0.0.0.0:443 --certfile=/path/to/certificate.crt --
   [![Github](./readme_images/github.png)](https://github.com/Zuribaby)
   [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
 
-[Aanuoluwapo Shodipo](https://github.com/yourusernme)
+[Aanuoluwapo Shodipo](https://github.com/Desolution1)
   [![Github](./readme_images/github.png)](https://github.com/yourusername)
   [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
 
