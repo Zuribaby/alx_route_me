@@ -67,16 +67,14 @@ ul {
     cursor: pointer;
 }
 
-/* Style for the dropdown container */
 .dropdown-container {
     position: relative;
     border-radius: 7px;
-    display: inline-block; /* This is optional based on your layout */
+    display: inline-block;
   }
   
-  /* Style for the dropdown list */
-  .dropdown-list {
-    width: 200px;
+.dropdown-list {
+    width: 200px;   
     height: auto;
     position: absolute;
     z-index: 2;
@@ -90,12 +88,11 @@ ul {
     border: 1px solid #ccc;
   }
 
-  .dropdown-items:hover {
+.dropdown-items:hover {
     background-color: #ccc;
   }
   
-  /* Show the dropdown when the button is hovered */
-  .dropdown-container:hover .dropdown-list {
+.dropdown-container:hover .dropdown-list {
     display: block;
   }  
 

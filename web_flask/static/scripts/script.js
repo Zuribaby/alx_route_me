@@ -55,4 +55,3 @@ function getBoundindbox() {
       console.error('Error fetching boundingbox of geocoding data:', error);
     });
 }
-

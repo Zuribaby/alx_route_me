@@ -1,11 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-<<<<<<< HEAD
-  const hotelsSearch = document.getElementById("hotels");
-  const hospitalsSearch = document.getElementById("hospitals");
-
-  hotelsSearch.addEventListener("click", function () {
-    fetchHotels();
-=======
   const userLocation = document.querySelectorAll(".my-location");
   const hotelsSearch = document.querySelectorAll(".hotels");
   const hospitalsSearch = document.querySelectorAll(".hospitals");
@@ -20,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hotelSearch.addEventListener('click', function () {
       fetchHotels();
     });
->>>>>>> d968b13446bf5a65f5dbb4cf093480da34938f45
   });
 
   hospitalsSearch.forEach(function(hospitalSearch) {
