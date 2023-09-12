@@ -28,7 +28,7 @@ To use this application user must grant permission access to the application and
  the user friendly interface enable seamless navigation.
 - webapp url - https://provolearning.tech/route-me
 - blog articles
-  - blog1
+  - Read this story from Provo Iyenoma on Medium: https://medium.com/@provo.iyen27/how-we-designed-routeme-geolocation-web-application-a6618186618f
   - blog2
   - blog3
 - authors Linkedln
