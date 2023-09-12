@@ -9,21 +9,32 @@ A geolocation web app.
 
 - [Project Name](#project-name)
 - [Table of Contents](#table-of-contents)
-- [About](#about)
+- [Introduction](#introduction)
 - [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technology Used](#technology-used)
+- [Contributing](contributing)
 - [Authors](#authors)
 - [Acknowledgement](#acknowledgement)
+- [License](#license)
 
-## About
+## Introduction
 
-Route me is a geolocation web app. it is a group portfolio project done by Alx software engineering
-student which serve as a final project for the foundation phase of our softeware engineering journey
-in  ALX.
-RouteMe is a Projecte initiated to help commutters navigate their environment and get info location update. the user friendly interface enable seamless navigation.
+Welcome to Routeme a versatile geolocation web applicaton. RouteMe is a Project initiated to help commutters navigate their environment and get info location update about their current location or any location of their choice. Routeme web application provides realtime location tracking of users, location search and also gives capability to get information about amenities that are available within aspecific geographical environment. 
+To use this application user must grant permission access to the application and make sure that location feature is enabled on their device. RouteMe has been tested on all devices and web browsers that supports geolocation navigation, and it has been observed that location accuracy is more on mobile device because of the . it is a responsive and seamless application that makes navigation both on mobile device and desktop system simple and interactive.
+
+ the user friendly interface enable seamless navigation.
+- webapp url - https://provoleaning.tech/route-me
+- blog articles
+  - blog1
+  - blog2
+  - blog3
+- authors Linkedln
+  - https://www.linkedin.com/in/desolution01
+  - https://www.linkedin.com/in/chiamaka-nwobodo-476a44191/
+  - https://www.linkedin.com/in/iyenoma-provo-6b633516a/
 
 ## Demo
 
@@ -119,15 +130,54 @@ root/alx-route-me>gunicorn -b 0.0.0.0:443 --certfile=/path/to/certificate.crt --
 - HTML/CSS
 - JavaScript
 
+## Contributing
+
+We welcome contributions from the community! To contribute to this project, please follow these guidelines:
+
+### Reporting Issues
+
+If you encounter any issues with the project or have a feature request, please check our [Issue Tracker](https://github.com/Zuribaby/alx-route-me/issues) to see if a similar issue has already been reported. If not, feel free to open a new issue. When creating an issue, please provide the following information:
+
+- A clear and concise title
+- A detailed description of the issue or feature request
+- Steps to reproduce (if applicable)
+- Your environment (e.g., operating system, browser version)
+
+### Submitting Pull Requests
+
+If you'd like to contribute code to the project, we encourage you to submit a Pull Request (PR). Follow these steps:
+
+1. Fork the project repository to your GitHub account.
+2. Create a new branch for your changes: `git checkout -b feature/your-feature-name`
+3. Make your changes, adhering to our coding standards (see below).
+4. Commit your changes with clear, concise messages.
+5. Push your branch to your fork: `git push origin feature/your-feature-name`
+6. Open a Pull Request against the `main` branch of this repository.
+7. Provide a clear title and description of your changes in the PR.
+8. Be prepared to address any feedback or questions during the review process.
+
+### Coding Standards
+
+We follow a set of coding standards to maintain code consistency and readability. Please ensure that your code adheres to the following guidelines:
+
+- Use meaningful variable and function names.
+- Follow the existing code style, including indentation and formatting.
+- Include comments when necessary to explain complex logic or unusual approaches.
+- Write clear commit messages in the present tense.
+
+By contributing to this project, you agree that your code will be licensed under the project's [License](#license).
+
+Thanks.
+
 ## Authors
 
 [Chiamaka Nwobodo](https://github.com/Zuribaby)
   [![Github](./readme_images/github.png)](https://github.com/Zuribaby)
-  [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
+  [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/chiamaka-nwobodo-476a44191/)
 
 [Aanuoluwapo Shodipo](https://github.com/Desolution01)
   [![Github](./readme_images/github.png)](https://github.com/Desolution01)
-  [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/yourusername)
+  [![Linkedin](./readme_images/linkedin.png)](https://www.linkedin.com/in/desolution01)
 
 [Provo Iyenoma](https://github.com/Provoski)
   [![Github](./readme_images/github.png)](https://github.com/Provoski)
@@ -141,3 +191,6 @@ We would like to extend our thanks to the following resources for their contribu
 - **Stack Overflow** - The Stack Overflow community has been instrumental in helping us overcome technical challenges.
 - **GitHub** - Making collaboration and version control seamless.
 - **Chatgpt** - Helped reduced time that would otherwise be wasted for code debugging. 
+
+## License
+This project is licensed under [Apache License 2.0](LICENSE) - see the [LICENSE](LICENSE) file for details.

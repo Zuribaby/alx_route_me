@@ -3,27 +3,34 @@ let userMarker;
 const defaultLatitude = 0;
 const defaultLongitude = 0;
 
-// map inittializer
+// custom marker icon object
+var customIcon = L.icon({
+  iconUrl: '../static/images/redLocation-icon.png',
+  iconSize: [32, 32], 
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32]
+});
+
+/**
+ * intitalize and create map instance
+ * @returns - Nothing
+ */
 function initMap() {
   map = L.map('map').setView([defaultLatitude, defaultLongitude], 18);
-  //userMarker = L.marker([defaultLatitude, defaultLongitude]).addTo(map);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
   }).addTo(map);
   getLocation();
 }
 
-var customIcon = L.icon({
-  iconUrl: '../static/images/redLocation-icon.png', // Replace with your custom icon URL
-  iconSize: [32, 32], // Size of the icon
-  iconAnchor: [16, 32], // Point of the icon that corresponds to the marker's location
-  popupAnchor: [0, -32] // Point from which the popup should open relative to the iconAnchor
-});
 
-// get user current location
+/**
+ * check if geolocation is supported on the device
+ * @returns - Nothing
+ */
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, showError, {
+    navigator.geolocation.watchPosition(showPosition, showError, {
       maximumAge: 0,
       enableHighAccuracy: true
     });
@@ -32,10 +39,11 @@ function getLocation() {
   }
 }
 
-// show user location on the map
+/** 
+ * get users location and display the marker on the map
+ * @returns - Nothing
+ */
 function showPosition(position) {
-  console.log("Latitude:", position.coords.latitude);
-  console.log("Longitude:", position.coords.longitude);
   var latitude = position.coords.latitude;
   var longitude = position.coords.longitude;
   if (userMarker) {
@@ -47,10 +55,13 @@ function showPosition(position) {
   const long = document.getElementById("lon");
   lati.textContent = "Latitude: " + latitude;
   long.textContent = "Longitude: " + longitude;
-  reverseGeocode(latitude, longitude);
 }
 
-// error handler
+/**
+ * handles and log errors
+ * @param {Object} - error to handle
+ * @returns - Nothing
+ */
 function showError(error) {
   switch(error.code) {
     case error.PERMISSION_DENIED:
