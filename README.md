@@ -26,7 +26,7 @@ Welcome to Routeme a versatile geolocation web applicaton. RouteMe is a Project 
 To use this application user must grant permission access to the application and make sure that location feature is enabled on their device. RouteMe has been tested on all devices and web browsers that supports geolocation navigation, and it has been observed that location accuracy is more on mobile device because of the . it is a responsive and seamless application that makes navigation both on mobile device and desktop system simple and interactive.
 
  the user friendly interface enable seamless navigation.
-- webapp url - https://provoleaning.tech/route-me
+- webapp url - https://provolearning.tech/route-me
 - blog articles
   - blog1
   - blog2
